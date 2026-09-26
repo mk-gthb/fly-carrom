@@ -1,0 +1,11 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Fly / Carrom</title><link rel="stylesheet" href="/static/style.css"></head>
+<body>
+<header class="top"><a class="wordmark" href="/">FIELD NOTE 07</a><span class="status"><i></i> LOCAL EXPERIMENT</span><span class="date">25 SEP 2026</span></header>
+<main>
+ <section class="intro"><p class="kicker">A tiny nervous system, given a very human problem</p><h1>Can a fly<br><em>play carrom?</em></h1><p class="dek">A measured connectome chooses the shot. Newton decides whether the idea was any good.</p></section>
+ <section class="stage"><div class="stage-head"><span>01 / LIVE BOARD</span><span id="telemetry">waiting for a shot</span></div><canvas id="scene" aria-label="3D carrom board and modeled fly"></canvas><div class="scene-caption"><span><b>OBJECTS</b> board · striker · coin · fly model</span><span><b>PHYSICS</b> friction · restitution · pockets</span></div></section>
+ <section class="controls"><div class="control-col"><p class="label">YOUR HAND</p><label>angle <output id="angleOut">0°</output><input id="angle" type="range" min="-50" max="50" value="0"></label><label>power <output id="powerOut">0.90</output><input id="power" type="range" min="20" max="100" value="90"></label><label>striker <output id="strikerOut">0.00</output><input id="striker" type="range" min="-70" max="70" value="0"></label><div class="buttons"><button id="shoot">SHOOT</button><button class="quiet" id="baseline">LET GEOMETRY AIM</button></div></div><div class="control-col fly-col"><p class="label">THE FLY <span class="dot"></span></p><p id="flyStatus" class="fly-status">The connectome is fixed. Only the readout learns.</p><div class="buttons"><button id="train">TRAIN READOUT</button><button class="quiet" id="flyShot" disabled>FLY SHOT</button></div><p class="fine">MaleCNS graph → sparse reservoir → ridge decoder<br>output: striker position / angle / power</p></div><div class="score"><div><strong id="shots">0</strong><span>shots</span></div><div><strong id="potted">0</strong><span>potted</span></div></div></section>
+ <footer><span>CONNECTOME-CONSTRAINED · NEWTON PHYSICS</span><span>the fly has no body to animate. so we gave it one.</span></footer>
+</main><script type="module" src="/static/app.js"></script></body></html>
