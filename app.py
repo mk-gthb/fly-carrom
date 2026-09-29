@@ -57,4 +57,16 @@ def fly_shot():
 def index():
     return FileResponse("static/index.html")
 
+@app.get("/style.css")
+def style():
+    return FileResponse("static/style.css", media_type="text/css")
+
+@app.get("/app.js")
+def javascript():
+    return FileResponse("static/app.js", media_type="text/javascript")
+
+@app.get("/controls-fallback.js")
+def controls_fallback():
+    return FileResponse("static/controls-fallback.js", media_type="text/javascript")
+
 app.mount("/static", StaticFiles(directory="static"), name="static")
